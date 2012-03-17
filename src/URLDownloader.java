@@ -29,6 +29,7 @@ public class URLDownloader{
             }
             fos = new FileOutputStream(file);
             fos.getChannel().transferFrom(rbc, 0, 1 << 24);
+            fos.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             return false;

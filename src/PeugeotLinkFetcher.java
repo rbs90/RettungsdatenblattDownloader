@@ -43,7 +43,7 @@ public class PeugeotLinkFetcher {
                             link = "http://services.peugeot.de/" + link;
                         }
                         links.add(new DownloadLink(link, "Peugeot" + File.separator
-                                + name.replaceAll("/", "_").trim() + ".pdf"));
+                                + name.replaceAll("/", "_").replaceAll("&eacute;", "e").trim() + ".pdf"));
 
                     }
                 }
